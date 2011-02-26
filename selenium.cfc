@@ -922,6 +922,10 @@
 		doCommand("waitForPageToLoad",[arguments.timeout]);
 	}
 
+	public void function waitForElementPresent(required string locator) {
+		doCommand("waitForElementPresent", [arguments.locator]);
+	}
+
 	public void function waitForFrameToLoad(required string frameAddress, required numeric timeout) 
 		hint=" Waits for a new frame to load.
         Selenium constantly keeps track of new pages and frames loading, and sets a 'newPageLoaded' flag when it first notices a page load.
